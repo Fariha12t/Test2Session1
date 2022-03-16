@@ -9,7 +9,7 @@ int input_number()
 int is_prime(int n)
 {
   int i,c=0;
-  for( i=1; i<=n ; i++)
+  for( i=1; i<=n/2 ; i++)
   {
     if (n%i==0)
     c=c+1;
