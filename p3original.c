@@ -8,18 +8,18 @@ int input_number()
 }
 int is_prime(int n)
 {
-  int i,c=0;
-  for( i=1; i<=n/2 ; i++)
+  int i,count=0;
+  for( i=1; i<=n ; i++)
   {
     if (n%i==0)
-    c=c+1;
+    count++;
   }   
   return 0;
 }
 void output(int n, int is_prime)
 {
-  int c;
-  if (c==2)
+  int count;
+  if (count==2)
   printf("%d number is PRIME\n",n);
   else 
   printf("%d number is not prime\n",n);
