@@ -18,10 +18,12 @@ int find_fibo(int n)
   return fibo;
 }
 void output(int n,int fibo)
+
 {
   printf("%d\n",fibo);
 }
 int main()
+
 {
   int n,fibo;
   n=input();
