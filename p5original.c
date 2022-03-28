@@ -45,6 +45,5 @@ int main()
   input_array(n,a);
   erotosthenes_sieve(n,a);
   output(n,a);
-  return 0;
-  
+  return 0; 
 }

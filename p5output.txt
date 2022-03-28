@@ -1,15 +1,77 @@
-#include<stdio.h>
-int input_array_size()
-{
-  int n;
-  printf("enter the array size\n");
-  scanf("%d",&n);
-  return n;
-}
-void input_array(int n,int a[n])
-{
-  for(int i=0;i<n;i++)
-    {
-      a[i]=i+1;
-    }
-}
+ gcc -g p5original.c
+ ./a.out
+enter the array size
+3
+prime numbers are
+2,3, gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x917: file p5original.c, line 41.
+(gdb) r
+Starting program: /home/runner/Test2Session1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5original.c:41
+41  {
+(gdb) n
+43    n=input_array_size();
+ 
+ gcc -g p5original.c
+ ./a.out
+enter the array size
+4
+prime numbers are
+2,3,0, gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x917: file p5original.c, line 41.
+(gdb) r
+Starting program: /home/runner/Test2Session1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5original.c:41
+41  {
+(gdb) n
+43    n=input_array_size();
+(gdb) n
+enter the array size
+5
+44    int a[n];
+(gdb) n
+45    input_array(n,a);
+(gdb) n
+46    erotosthenes_sieve(n,a);
+(gdb) n
+47    output(n,a);
+(gdb) n
+prime numbers are
+48    return 0; 
+(gdb) 
