@@ -26,9 +26,7 @@ void erotosthenes_sieve(int n, int a[n])
             if(j%a[i]==0)
               a[j-1]=0;
           }
-    }
-    
-    
+    }    
 }
 void output(int n, int a[n])
 {
