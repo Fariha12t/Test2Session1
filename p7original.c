@@ -15,16 +15,16 @@ Line input_point()
 {
   float x1,y1,x2,y2;
   printf("enter two points\n");
-  scanf("%f %f %f %f",x1,y1,x2,y2);
+  scanf("%f %f %f %f",&x1,&y1,&x2,&y2);
 }
 void find_length(Line *l)
 {
-  Line x1,y1,x2,y2;
-  l=sqrt[(x2-x1)(x2-x1)+(y2-y1)*(y2-y1)];
+  Line *x1,*y1,*x2,*y2;
+  *l=sqrt[(x2-x1)(x2-x1)+(y2-y1)*(y2-y1)];
 }
 void output(Line l)
 {
-  printf("the length of line is %d",l);
+  printf("the length of line is %f",l);
 }
 int main()
 {
