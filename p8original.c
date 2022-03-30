@@ -1,4 +1,4 @@
-/*#include<stdio.h>
+#include<stdio.h>
 #include<math.h>
 struct _point 
 {
@@ -67,10 +67,10 @@ int main()
   input_polygon(&p);
   find_perimeter(&p);
   output(p);
-}*/
+}
 
 
-#include<stdio.h>
+/*#include<stdio.h>
 #include<math.h>
 struct _point
 {
@@ -87,4 +87,4 @@ struct polygon
 {
   int n;
   
-}
+}*/
