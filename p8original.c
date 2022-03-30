@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<math.h>
 struct _point 
 {
@@ -23,8 +23,8 @@ Line input_line()
   Line l;
   printf("Enter th coordinates of line:- ");
   scanf("%f %f",&l.p1.x,&l.p1.y);
-    printf("Enter th coordinates of line:- ");
-  scanf("%f %f",&l.p2.x,&l.p2.y);
+    //printf("Enter th coordinates of line:- ");
+  //scanf("%f %f",&l.p2.x,&l.p2.y);
   return l;
 }
 void input_polygon(Polygon *p)
@@ -67,4 +67,24 @@ int main()
   input_polygon(&p);
   find_perimeter(&p);
   output(p);
+}*/
+
+
+#include<stdio.h>
+#include<math.h>
+struct _point
+{
+ float x,y;
+};
+typedef struct _point point;
+struct _line
+{
+  point p1,p2;
+  float distance;
+};
+typedef struct _line line;
+struct polygon
+{
+  int n;
+  
 }
