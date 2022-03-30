@@ -8,14 +8,22 @@ int input()
 }
 int find_fibo(int n)
 {
-  int n1=0,n2=1,fibo,i;
-  for(i=0;i<n-1;++i)
+ /* int fibo=0,a=0,b=1;
+  for(int i=0;i<=n;i++)
     {
-      fibo=n1+n2;
-      n1=n2;
-      n2=fibo;
+      fibo=a;
+      a=b;
+      b=fibo+b;
     }
-  return fibo;
+    return fibo;*/
+  int temp=0,n2=0,n1=1;
+  for(int i=1;i<=n;i++)
+    {
+      temp=n1;
+      n1=n1+n2;
+      n2=temp;
+    }
+  return n2;
 }
 void output(int n,int fibo)
 
