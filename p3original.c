@@ -14,12 +14,12 @@ int is_prime(int n)
     if (n%i==0)
     count++;
   }   
-  return 0;
+  return count;
 }
 void output(int n, int is_prime)
 {
-  int count;
-  if (count==2)
+  
+  if (is_prime==2)
   printf("%d number is PRIME\n",n);
   else 
   printf("%d number is not prime\n",n);

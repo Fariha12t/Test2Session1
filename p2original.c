@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+
 void input_line(float *x1, float *y1, float *x2, float *y2,float *x3,float *y3)
 {
    printf("enter the values of points\n");
@@ -39,7 +39,7 @@ int main()
   float x1,x2,x3,y1,y2,y3;
   input_line(&x1,&y1,&x2,&y2,&x3,&y3);
   
-  int a;
+  float a;
   a=is_triangle(x1,y1,x2,y2,x3,y3);
   output(x1,y1,x2,y2,x3,y3,a);
   return 0;
