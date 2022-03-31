@@ -20,7 +20,7 @@ Line input_point()
 void find_length(Line *l)
 {
   Line *x1,*y1,*x2,*y2;
-  *l=sqrt[(x2-x1)(x2-x1)+(y2-y1)*(y2-y1)];
+  *l=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
 }
 void output(Line l)
 {
