@@ -9,24 +9,19 @@ void input_string(char *a, char *b)
 }
 int str_substr(char *string, char *substring)
 {
-  int index=0,i,j;
+  int i,j=0;
   
-  int n=strlen(string);
-  int b=strlen(substring);
-  for (i=0;string[i]!='\0';i++)
+  
+  for ( i=0;string[i]!='\0'&&substring[j]!='\0';i++)
     {
-      j=0;
-      while(substring[j]!='\0')
-      {
-        if(string[i]==substring[j])
-        {
-          index=index+1;
-        }
-        j++;
-      }
-      if (index== b)
-        return index;
+     if(string[i]==substring[j])
+     {
+       j++;
+      }else  
+       j=0;
     }
+  return i-j;
+    
 }
 void output(char *string, char *substring, int index)
 {
