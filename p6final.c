@@ -17,7 +17,7 @@ int str_substr(char *string, char *substring)
      if(string[i]==substring[j])
      {
        j++;
-      }else  
+      }else if(j!=0)
        j=0;
     }
   return i-j;
