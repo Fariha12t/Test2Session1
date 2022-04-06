@@ -10,8 +10,6 @@ void input_string(char *a, char *b)
 int str_substr(char *string, char *substring)
 {
   int i,j=0;
-  
-  
   for ( i=0;string[i]!='\0'&&substring[j]!='\0';i++)
     {
      if(string[i]==substring[j])
@@ -20,8 +18,7 @@ int str_substr(char *string, char *substring)
       }else if(j!=0)
        j=0;
     }
-  return i-j;
-    
+  return i-j;   
 }
 void output(char *string, char *substring, int index)
 {
