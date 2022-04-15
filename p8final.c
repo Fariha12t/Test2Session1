@@ -1,24 +1,27 @@
 #include <stdio.h>
 #include <math.h>
 
-typedef struct point
+ struct _point
 {
     float x, y;
-} Point;
+} ;
+typedef struct _point Point;
 
 
-typedef struct line
+ struct _line
 {
     Point p;
     float distance;
-} Line;
+};
+typedef struct _line Line;
 
-typedef struct polygon
+struct _polygon
 {
-    int sides;
+    int n;
     Line l[100];
     float perimeter;
-} Polygon;
+};
+typedef struct _polygon Polygon;
 
 
 int input_n()
@@ -47,8 +50,8 @@ void input_n_lines(int n, Line l[n])
 
 int input_polygon(Polygon* p)
 {
-    p->sides = input_n();
-    input_n_lines(p->sides, p->l);
+    p->n = input_n();
+    input_n_lines(p->n, p->l);
     p->perimeter = 0;
 }
 
@@ -69,8 +72,8 @@ void find_n_distance(int n, Line* l)
 
 void find_perimeter(Polygon* p)
 {
-    find_n_distance(p->sides, p->l);
-    for (int i = 0; i < p->sides; i++)
+    find_n_distance(p->n, p->l);
+    for (int i = 0; i < p->n; i++)
     {
         p->perimeter += p->l[i].distance;
     }
