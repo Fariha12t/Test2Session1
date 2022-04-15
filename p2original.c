@@ -39,7 +39,7 @@ int main()
   float x1,x2,x3,y1,y2,y3;
   input_line(&x1,&y1,&x2,&y2,&x3,&y3);
   
-  float a;
+  int a;
   a=is_triangle(x1,y1,x2,y2,x3,y3);
   output(x1,y1,x2,y2,x3,y3,a);
   return 0;

@@ -3,7 +3,7 @@
 
 typedef struct point
 {
-    float start_end_x, start_end_y;
+    float x, y;
 } Point;
 
 
@@ -33,11 +33,11 @@ Line input_line(int n)
 {
     Line l;
     printf("Enter the coordinates of point %d (x,y): \n", n);
-    scanf("%f%f", &l.p.start_end_x, &l.p.start_end_y);
+    scanf("%f%f", &l.p.x, &l.p.y);
     return l;
 }
 
-void input_n_lines(int n, Line* l)
+void input_n_lines(int n, Line l[n])
 {
     for (int i = 0; i < n; i++)
     {
@@ -54,7 +54,7 @@ int input_polygon(Polygon* p)
 
 float find_distance(Point a, Point b)
 {
-    return sqrt((a.start_end_x - b.start_end_x) * (a.start_end_x - b.start_end_x) + (a.start_end_y - b.start_end_y) * (a.start_end_y - b.start_end_y));
+    return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
 }
 
 void find_n_distance(int n, Line* l)
@@ -81,7 +81,7 @@ void output(Polygon p)
     printf("The perimeter of the polynomial is: %f\n", p.perimeter);
 }
 
-int main(void)
+int main()
 {
     Polygon p;
     input_polygon(&p);

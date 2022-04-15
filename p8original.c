@@ -18,6 +18,13 @@ struct _polygon
   float perimeter;
 };
 typedef struct _polygon Polygon;
+int input_n()
+{
+  int n;
+  printf("Enter the number of sides of the polygon:\n");
+  scanf("%d",&n);
+  return n;
+}
 Line input_line()
 {
   Line l;

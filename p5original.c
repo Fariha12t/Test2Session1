@@ -15,13 +15,13 @@ void input_array(int n,int a[n])
 }
 void erotosthenes_sieve(int n, int a[n])
 {
-  int i,j;
-  for(i=1;i<n;i++)
+  
+  for(int i=1;i<n;i++)
     {
       if(a[i]==0)
         continue;
         
-        for(j=a[i]+1;j<=n;j++)
+        for(int j=a[i]+1;j<=n;j++)
           {
             if(j%a[i]==0)
               a[j-1]=0;
