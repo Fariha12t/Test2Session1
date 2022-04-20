@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include <math.h>
-
- struct _point
+struct _point
 {
     float x, y;
 } ;
 typedef struct _point Point;
-
-
- struct _line
+struct _line
 {
     Point p;
     float distance;
 };
 typedef struct _line Line;
-
 struct _polygon
 {
     int n;
@@ -22,8 +18,6 @@ struct _polygon
     float perimeter;
 };
 typedef struct _polygon Polygon;
-
-
 int input_n()
 {
     int n;
@@ -31,7 +25,6 @@ int input_n()
     scanf("%d", &n);
     return n;
 }
-
 Line input_line(int n)
 {
     Line l;
@@ -39,7 +32,6 @@ Line input_line(int n)
     scanf("%f%f", &l.p.x, &l.p.y);
     return l;
 }
-
 void input_n_lines(int n, Line l[n])
 {
     for (int i = 0; i < n; i++)
@@ -47,19 +39,17 @@ void input_n_lines(int n, Line l[n])
         l[i] = input_line(i + 1);
     }
 }
-
-int input_polygon(Polygon* p)
+int input_polygon(int n,Polygon* p)
 {
     p->n = input_n();
     input_n_lines(p->n, p->l);
-    p->perimeter = 0;
+    p->perimeter = 0;  
+  return p->perimeter;
 }
-
 float find_distance(Point a, Point b)
 {
-    return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
+    return sqrt(pow((a.x - b.x),2)+pow((a.y - b.y),2)) ;
 }
-
 void find_n_distance(int n, Line* l)
 {
     int i;
@@ -69,7 +59,6 @@ void find_n_distance(int n, Line* l)
     }
     l[i].distance = find_distance(l[i].p, l[0].p);
 }
-
 void find_perimeter(Polygon* p)
 {
     find_n_distance(p->n, p->l);
@@ -78,18 +67,15 @@ void find_perimeter(Polygon* p)
         p->perimeter += p->l[i].distance;
     }
 }
-
 void output(Polygon p)
 {
-    printf("The perimeter of the polynomial is: %f\n", p.perimeter);
+    printf("The perimeter of the polygon is: %f\n", p.perimeter);
 }
-
 int main()
-{
+{int n;
     Polygon p;
-    input_polygon(&p);
+    input_polygon(n,&p);
     find_perimeter(&p);
     output(p);
-
     return 0;
 }

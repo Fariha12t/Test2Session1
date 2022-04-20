@@ -30,8 +30,7 @@ Line input_line()
   Line l;
   printf("Enter th coordinates of line:- ");
   scanf("%f %f",&l.p1.x,&l.p1.y);
-    //printf("Enter th coordinates of line:- ");
-  //scanf("%f %f",&l.p2.x,&l.p2.y);
+    
   return l;
 }
 void input_polygon(Polygon *p)
